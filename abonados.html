@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/facilito_styles.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Facilito - Facele</title>
+</head>
+
+<body>
+  <!-- Navnar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Facilito</a>
+        <div class="d-flex align-items-center">
+            <i class="fas fa-sign-out-alt"></i>
+        </div>
+    </div>
+</nav>
+      <!-- Header -->
+      <header class="container mt-5 pe-0 d-none d-sm-block">
+        <div class="row">
+            <!-- Caja 1 -->
+            <div class="col-md-3 ps-0">
+                <div class="custom-box p-3 d-flex flex-column h-100">
+                    <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center">
+                                <p class="pe-3 m-0 text-uppercase">
+                                    <i class="fas fa-calendar"></i> <span class="small">Fecha de conexión</span> <br><span id="connectionDate" class="fw-bold">Cargando...</span>
+                                </p> 
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 2-->
+            <div class="col-md-3">
+                <div class="custom-box p-3 d-flex flex-column h-100">
+                    <div class="d-flex align-items-center">
+                            <div class="d-flex align-items-center"> 
+                                <p class="p-0 m-0 text-uppercase">
+                                  <i class="far fa-clock"></i> <span class="small">Hora de conexión</span> <br> <span id="connectionTime" class="fw-bold">Cargando...</span>
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 3 -->
+            <div class="col-md-2">
+                <div class="custom-box p-3 d-flex flex-column h-100">
+                    <div class="d-flex align-items-center">
+                        <p class="p-0 m-0 text-uppercase">
+                          <i class="far fa-user"></i> <span class="small">total <br> abonados</span> <br> <span class="fw-bold">220</span>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 4 -->
+            <div class="col-md-2">
+                <div class="custom-box p-3 d-flex flex-column h-100">
+                    <div class="d-flex align-items-center">
+                        <p class="p-0 m-0 text-uppercase">
+                            <i class="fas fa-check me-1"></i> <span class="small">abonados <br> activos</span> <br> <span class="fw-bold">10</span>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+            <!-- Caja 5 -->
+            <div class="col-md-2">
+                <div class="custom-box p-3 d-flex flex-column h-100">
+                    <div class="d-flex align-items-center">
+                        <p class="p-0 m-0 text-uppercase">
+                            <i class="fas fa-check me-1"></i> <span class="small">abonados <br> inactivos</span> <br> <span class="fw-bold">4</span>
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+  <!-- Content -->
+  <div class="container mt-5 mb-5 p-0">
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="myTabs">
+      <li class="nav-item">
+        <a class="nav-link active text-uppercase font-weight-bolder" id="tab1" data-bs-toggle="tab" href="#content1">Excepciones</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-uppercase font-weight-bolder" id="tab2" data-bs-toggle="tab" href="#content2">Abonados</a>
+      </li>
+    </ul>
+
+    <!-- Search and Table Box -->
+    
+    <div class="col-md-12 table-box">
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="content1">
+          <div class="row align-items-center pb-4">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb pb-4">
+                <li class="breadcrumb-item active small text-uppercase" aria-current="page"><i class="fas fa-angle-left"></i> <a href="index.html">Volver a exepciones</a></li>
+              </ol>
+            </nav>
+            <div class="col-md-3 d-flex align-items-center justify-content-left">
+              <h3>Abonado 1</h3>
+            </div>
+            <div class="col-md-9 d-flex align-items-center justify-content-end">
+              <!-- Advanced Search Button -->
+              <div class="container p-0">
+                <form class="d-flex justify-content-end" role="search">
+                  <button type="button" class="btn btn-primary width-100 text-uppercase" data-bs-toggle="modal" data-bs-target="#myModal">Búsqueda avanzada</button>
+                </form>
+              </div>
+            </div>
+          </div>
+            <!-- Busqueda avanzada Ventana Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content p-2">
+                    <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Búsqueda avanzada</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container">
+                          <form>
+                              <div class="col mb-3">
+                                      <label for="abonado" class="form-label"><i class="far fa-user"></i> Abonado</label>
+                                      <input type="text" class="form-control" id="abonado" name="abonado" required>
+                              </div>
+                              <div class="row">
+                                      <div class="col mb-3">
+                                          <label for="fechaDesde" class="form-label"><i class="far fa-calendar"></i> Fecha desde</label>
+                                          <input type="date" class="form-control" id="fechaDesde" name="fechaDesde" required>
+                                      </div>
+                                      <div class="col mb-3">
+                                          <label for="fechaHasta" class="form-label"><i class="far fa-calendar"></i> Fecha hasta</label>
+                                          <input type="date" class="form-control" id="fechaHasta" name="fechaHasta" required>
+                                      </div>
+                              </div>
+                              <div class="col mb-3">
+                                      <label for="licencia" class="form-label"><i class="far fa-folder"></i> Licencia</label>
+                                      <input type="text" class="form-control" id="licencia" name="licencia" required>
+                              </div>
+                              <div class="row">
+                                      <div class="col mb-3">
+                                          <label for="mid" class="form-label text-uppercase font-weight-bolder"><i class="fas fa-tag"></i> Mid</label>
+                                          <input type="text" class="form-control" id="mid" name="mid" required>
+                                      </div>
+                                      <div class="col mb-3">
+                                          <label for="sid" class="form-label text-uppercase font-weight-bolder"><i class="fas fa-tag"></i> Sid</label>
+                                          <input type="text" class="form-control" id="sid" name="sid" required>
+                                      </div>
+                              </div>
+                              <div class="col mb-3">
+                                      <label for="motivo" class="form-label text-uppercase font-weight-bolder"><i class="far fa-comment"></i> Motivo</label>
+                                      <input type="text" class="form-control" id="motivo" name="motivo" required>
+                              </div>
+                              <!-- Buttons -->
+                              <div class="row">
+                                      <div class="col mb-3">
+                                          <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancelar</button>
+                                      </div>
+                                      <div class="col mb-3">
+                                          <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                                      </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Table -->
+            <div class="row">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th class="text-uppercase ps-4"><p class="m-0">Fecha registro</p></th>
+                              <th class="text-uppercase"><p class="m-0">Registros</p></th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                              <td class="ps-4 pt-2 pb-2">
+                                  <p><i class="far fa-calendar"></i> 03-04-2023 / <i class="far fa-clock"></i> 15:00:00 hrs</p>
+                              </td>
+                              <td class="pt-2 pb-2">
+                                  <a href="#" data-bs-toggle="modal" data-bs-target="#miModal" class="text-uppercase"><i class="far fa-eye"></i> Ver registro</a>
+                              </td>
+                        </tr>
+                        <tr>
+                          <td class="ps-4 pt-2 pb-2">
+                              <p><i class="far fa-calendar"></i> 03-04-2023 / <i class="far fa-clock"></i> 15:00:00 hrs</p>
+                          </td>
+                          <td class="pt-2 pb-2">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#miModal" class="text-uppercase"><i class="far fa-eye"></i> Ver registro</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="ps-4 pt-2 pb-2">
+                              <p><i class="far fa-calendar"></i> 03-04-2023 / <i class="far fa-clock"></i> 15:00:00 hrs</p>
+                          </td>
+                          <td class="pt-2 pb-2">
+                              <a href="#" data-bs-toggle="modal" data-bs-target="#miModal" class="text-uppercase"><i class="far fa-eye"></i> Ver registro</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                  </table>
+              </div>
+            </div>
+              <!-- Pagination -->
+              <div class="d-flex align-items-center justify-content-end">
+                <nav aria-label="Page navigation">
+                  <ul class="pagination justify-content-center mt-4">
+                    <li class="page-item disabled">
+                      <a class="page-link small text-uppercase" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                      <span class="page-link">1</span>
+                    </li>
+                    <li class="page-item small text-uppercase"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item small text-uppercase"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item last-page">
+                      <a class="page-link small text-uppercase" href="#">Siguiente</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="content2">
+              <div class="row align-items-center pb-4">
+                <div class="col-md-3">
+                  <h3>Nuestros abonados</h3>
+                </div>
+                <div class="col-md-9 d-flex align-items-center justify-content-end">
+                  <!-- Advanced Search Button for Abonados -->
+                  <div class="container p-0">
+                    <form class="d-flex justify-content-end" role="search">
+                      <button type="button" class="btn btn-primary width-100 text-uppercase" data-bs-toggle="modal" data-bs-target="#myModal2">Búsqueda avanzada</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Busqueda avanzada Ventana Modal -->
+              <div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content p-2">
+                      <div class="modal-header">
+                          <h5 class="modal-title text-uppercase" id="exampleModalLabel">Buscar abonados</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form>
+                                  <div class="mb-3">
+                                      <label for="Identificación" class="form-label"><i class="far fa-folder"></i> Identificación</label>
+                                      <input type="text" class="form-control" id="Identificación" name="Identificación" required>
+                                  </div>
+                                  <div class="mb-3">
+                                      <div class="col">
+                                              <label for="exampleSelect" class="form-label"><i class="fas fa-check"></i> Estado</label>
+                                              <select class="form-select" id="exampleSelect" aria-label="Selecciona una opción">
+                                                  <option selected>Seleccionar</option>
+                                                  <option value="opcion1">Activo</option>
+                                                  <option value="opcion2">Inactivo</option>
+                                                  <option value="opcion3">Migración</option>
+                                              </select>
+                                      </div>
+                                  </div>  
+                                  <!-- Buttons -->
+                                  <div class="row mb-3">
+                                      <div class="col mb-6">
+                                          <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal">Cancelar</button>
+                                      </div>
+                                      <div class="col mb-6">
+                                          <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                                      </div>
+                                  </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+              </div>        
+              <!-- Table for Abonados -->
+              <div class="row">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th class="text-uppercase ps-4"><p class="m-0">Identificación</p></th>
+                                <th class="text-uppercase"><p class="m-0">Nombre</p></th>
+                                <th class="text-uppercase"><p class="m-0">Estado</p></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ps-4 pt-2 pb-2">
+                                    <p>1.234.567-8</p>
+                                </td>
+                                <td class="pt-2 pb-2">
+                                    <p>Facele SPA</p>
+                                </td>
+                                <td class="pt-2 pb-2">
+                                    <p class="state">Activo</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 pt-2 pb-2">
+                                    <p>1.234.567-8</p>
+                                </td>
+                                <td class="pt-2 pb-2">
+                                    <p>Facele SPA</p>
+                                </td>
+                                <td class="pt-2 pb-2">
+                                    <p class="state">Activo</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ps-4 pt-2 pb-2">
+                                    <p>1.234.567-8</p>
+                                </td>
+                                <td class="pt-2 pb-2">
+                                    <p>Facele SPA</p>
+                                </td>
+                                <td class="pt-2 pb-2">
+                                    <p class="state-inactivo">Inactivo</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+               <!-- Pagination -->
+               <div class="d-flex align-items-center justify-content-end">
+                <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center mt-4">
+                    <li class="page-item disabled">
+                    <a class="page-link small text-uppercase" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                    <span class="page-link">1</span>
+                    </li>
+                    <li class="page-item small text-uppercase"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item small text-uppercase"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item last-page">
+                    <a class="page-link small text-uppercase" href="#">Siguiente</a>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+        </div>
+      </div>
+    </div>
+  <!-- Ventana Modal registro -->
+  <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-2">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registro: 03-04-2023 - 15:00:00 hrs</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12 py-4 title-box">
+                  <h3>Abonado 1</h3>
+                </div>
+              </div>
+              <table>
+                <tr>
+                  <td><p class="titulo text-uppercase p-2">Motivo</p></td>
+                  <td><p class="contenido text-uppercase p-2">Null Pointer Exception</p></td>
+                </tr>
+                <tr>
+                  <td><p class="titulo text-uppercase p-2">Entrada</p></td>
+                  <td><p class="contenido text-uppercase p-2">Lorem Ipsum</p></td>
+                </tr>
+                <tr>
+                    <td><p class="titulo text-uppercase p-2">Licencia</p></td>
+                    <td><p class="contenido text-uppercase p-2">com.facele.xpc.logica</p></td>
+                </tr>
+                <tr>
+                    <td><p class="titulo text-uppercase p-2 pb-4">Nodo</p></td>
+                    <td><p class="contenido text-uppercase p-2">pc-oficina 192.168.10.1 - WINDOWS 10 - rchomali</p></td>
+                </tr>
+                <tr>
+                    <td><p class="titulo text-uppercase p-2">URL</p></td>
+                    <td><p class="contenido text-uppercase p-2">test.org/xpc/abonado/v10</p></td>
+                </tr>
+                <tr>
+                    <td><p class="titulo text-uppercase p-2 pb-5">Excepción</p></td>
+                    <td><p class="contenido text-uppercase p-2 pb-4">cl.facele.qadsa null pointed exception line 10...</p></td>
+                </tr>
+                <tr>
+                    <td><p class="titulo text-uppercase p-2">Input</p></td>
+                    <td><p class="contenido text-uppercase p-2">dto...</p></td>
+                </tr>
+                <tr>
+                    <td><p class="titulo text-uppercase p-2">User</p></td>
+                    <td><p class="contenido text-uppercase p-2">rchomali@facele.cl</p></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <footer class="p-4">
+    <p><a href=""><img src="https://facele.cl/wp-content/themes/facele/img/facele-logo-blanco.svg" alt="" class="pe-4"></a> @ 2023 / Prueba técnica Simona Peredo</p>
+  </footer>
+<!-- scrips -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js" integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var myTabs = new bootstrap.Tab(document.getElementById('tab1'));
+    myTabs.show();
+
+    var tabLinks = document.querySelectorAll('.nav-link');
+    tabLinks.forEach(function (element) {
+      element.addEventListener('click', function (event) {
+        event.preventDefault();
+        var tab = new bootstrap.Tab(element);
+        tab.show();
+      });
+    });
+  });
+</script>
+<script>
+  function updateConnectionTime() {
+      var currentDate = new Date();
+      var day = currentDate.getDate();
+      var month = currentDate.getMonth() + 1; // Los meses en JavaScript van de 0 a 11
+      var year = currentDate.getFullYear();
+      var hours = currentDate.getHours();
+      var minutes = currentDate.getMinutes();
+      var seconds = currentDate.getSeconds();
+
+      // Agrega un cero delante si es necesario
+      day = (day < 10) ? '0' + day : day;
+      month = (month < 10) ? '0' + month : month;
+      hours = (hours < 10) ? '0' + hours : hours;
+      minutes = (minutes < 10) ? '0' + minutes : minutes;
+      seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+      var dateString = day + '/' + month + '/' + year;
+      var timeString = hours + ':' + minutes + ':' + seconds;
+
+      document.getElementById('connectionDate').innerText = dateString;
+      document.getElementById('connectionTime').innerText = timeString;
+  }
+
+  // Actualiza la fecha y hora cada segundo
+  setInterval(updateConnectionTime, 1000);
+
+  // Actualiza la fecha y hora al cargar la página
+  updateConnectionTime();
+</script>
+</body>
+</html>
+

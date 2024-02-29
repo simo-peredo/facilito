@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/facilito_styles.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Facilito - Facele</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <p>Facilito</p>
+      </a>
+    </div>
+  </nav>
+  <div class="container m-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="pt-4">
+            <p class="text-center title-login text-uppercase">Iniciar sesión</p>
+          </div>
+          <div class="card-body">
+            <form id="loginForm">
+              <div class="mb-4">
+                <label for="username" class="form-label"><i class="far fa-user"></i> Usuario</label>
+                <input type="text" class="form-control" id="username" name="username" required placeholder="example@facele.cl">
+              </div>
+              <div class="mb-4">
+                <label for="password" class="form-label"><i class="fas fa-lock"></i> Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" required placeholder="******">
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="p-4">
+    <p><a href=""><img src="https://facele.cl/wp-content/themes/facele/img/facele-logo-blanco.svg" alt="" class="pe-4"></a> @ 2023 / Prueba técnica Simona Peredo</p>
+  </footer>
+  <!-- Bootstrap JS and jQuery (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Your custom jQuery code -->
+  <script>
+    $(document).ready(function () {
+      // Escucha del evento submit en el formulario
+      $("#loginForm").submit(function (event) {
+        event.preventDefault(); // Evitar que se envíe el formulario por defecto
+
+        // Obtener los valores del formulario
+        var username = $("#username").val();
+        var password = $("#password").val();
+
+        // Puedes realizar acciones adicionales aquí
+
+        // Redirigir a una URL específica (por ejemplo, "dashboard.html")
+        window.location.href = "index.html";
+      });
+    });
+  </script>
+
+</body>
+
+</html>
