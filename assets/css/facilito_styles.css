@@ -144,7 +144,7 @@
     thead th p,
     tbody tr p,
     tbody tr a {
-    font-size: 0.813rem;
+    font-size: 0.75rem;
     margin-bottom: 0;
     }
 
@@ -250,7 +250,7 @@
 
     footer p {
       color: #fff;
-      font-size: 0.688rem;
+      font-size: 0.875rem;
     }
 
     /* login */
